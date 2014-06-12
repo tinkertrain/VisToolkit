@@ -2,21 +2,51 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>NVD3</title>
+	<title>Visualization Toolkit for Fuse</title>
+	<link href='http://fonts.googleapis.com/css?family=PT+Serif|Roboto+Condensed:300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="bower_components/nvd3/nv.d3.css">
 	<link rel="stylesheet" type="text/css" href="css/main.min.css">
 </head>
 <body>
-	<h1>Toolkit</h1>
+	<div class="container">
 
-	<div id="chart">
-		<svg></svg>
+		<header>
+			<h1>Visualization Toolkit for Fuse</h1>
+			<form id="facetForm">
+				<label for="facetSelect">Facet</label>
+				<select name="facets" id="facetSelect">
+					<option value="0">All facets</option>
+				</select>
+			</form>
+		</header>
+
+		<div class="info">
+			<p>Showing: <em id="userQuery">All facets</em></p>
+		</div>
+
+		<div id="chart">
+			<svg></svg>
+		</div>
+
+		<footer>
+			<p>Dependencies:</p>
+			<ul>
+				<li><a href="http://d3js.org/">D3</a></li>
+				<li><a href="http://nvd3.org/">NVD3</a></li>
+				<li><a href="http://lodash.com/">Lo-Dash</a><span>&nbsp;For manipulating data (object, arryas, collections, etc)</span></li>
+				<li><a href="https://github.com/mroderick/PubSubJS">PubSubJS</a><span>&nbsp;A pub/sub micro library to handle notifications after async calls</span></li>
+				<li><a href="http://jquery.com">jQuery</a><span>&nbsp;Used for event handling, DOM manipulation and ajax</span></li>
+			</ul>
+		</footer>
 	</div>
 
 	<script src="bower_components/lodash/dist/lodash.js"></script>
+	<script src="bower_components/jquery/dist/jquery.js"></script>
 	<script src="bower_components/d3/d3.js"></script>
 	<script src="bower_components/nvd3/nv.d3.js"></script>
-	<script src="bower_components/atomic/dist/atomic.js"></script>
+	<script src="bower_components/pubsub-js/src/pubsub.js"></script>
+	<script src="scripts/services/urlService.js"></script>
+	<script src="scripts/services/webservicesProxy.js"></script>
 	<script src="scripts/app.js"></script>
 </body>
 </html>
