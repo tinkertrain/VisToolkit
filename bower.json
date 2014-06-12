@@ -16,7 +16,8 @@
   "dependencies": {
     "nvd3": "~1.1.15-beta",
     "lodash": "~2.4.1",
-    "atomic": "https://github.com/toddmotto/atomic.git#~1.0.0",
-    "normalize-less": "*"
+    "normalize-less": "*",
+    "pubsub-js": "~1.4.2",
+    "jquery": "~2.1.1"
   }
 }
