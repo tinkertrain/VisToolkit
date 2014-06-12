@@ -30,11 +30,6 @@ node_modules
 # Users Environment Variables
 .lock-wscript
 
-
-### Bower ###
-bower_components
-
-
 ### SublimeText ###
 # workspace files are user-specific
 *.sublime-workspace
