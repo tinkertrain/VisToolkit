@@ -9,7 +9,7 @@
   var chart;
   var parsedFacets;
 
-  var parseNVD3Data = function(facet, allValues) {
+  var prepareNVD3Data = function(facet, allValues) {
     return [{
       values: allValues,
       key: facet,
@@ -61,7 +61,7 @@
     }
     else {
       d3.select('#chart svg')
-        .datum(parseNVD3Data('All facets', parsedFacets))
+        .datum(prepareNVD3Data('All facets', parsedFacets))
         .transition()
         .duration(500)
         .call(chart);
@@ -98,7 +98,7 @@
         .tickFormat(d3.format('g'));
 
       d3.select('#chart svg')
-        .datum(parseNVD3Data('All facets', parsedFacets))
+        .datum(prepareNVD3Data('All facets', parsedFacets))
         .transition()
         .duration(500)
         .call(chart);
@@ -115,7 +115,7 @@
       .axisLabel(facetSelect.options[facetSelect.selectedIndex].text);
 
     d3.select('#chart svg')
-      .datum(parseNVD3Data(facetSelect.options[facetSelect.selectedIndex].text, parsedFacet))
+      .datum(prepareNVD3Data(facetSelect.options[facetSelect.selectedIndex].text, parsedFacet))
       .transition()
       .duration(500)
       .call(chart);
