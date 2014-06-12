@@ -1,8 +1,12 @@
 // LIBS
-@import url('bower_components/normalize-less/normalize.less');
+@import 'bower_components/normalize-less/normalize.less';
 
-#chart svg {
-  height: 500px;
-  min-width: 200px;
-  min-height: 100px;
-}
+// BASE
+@import 'base/typography.less';
+
+// LAYOUT
+@import 'layout/global.less';
+
+// MODULES
+@import 'modules/forms.less';
+@import 'modules/chart.less';

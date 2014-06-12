@@ -168,8 +168,79 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+body {
+  font-family: 'PT Serif', serif;
+  color: #666;
+}
+h1,
+h2,
+h3 {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+h1 {
+  text-align: center;
+  margin: 0 0 15px;
+}
+a {
+  color: #ff7f0e;
+}
+body {
+  background-color: #f8f8f8;
+}
+.container {
+  margin: 0 auto;
+  padding: 0 2em;
+  width: 100%;
+  max-width: 768px;
+}
+.info {
+  text-align: center;
+}
+header,
+footer {
+  background-color: #f2f2f2;
+}
+header {
+  padding-top: 15px;
+}
+footer {
+  font-size: 0.9em;
+  padding-bottom: 10px;
+  margin-top: 2em;
+}
+footer p {
+  background-color: #999;
+  color: #eee;
+  padding: 10px;
+}
+form {
+  padding: 5px;
+  background-color: #999;
+  text-align: right;
+}
+label,
+select {
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  line-height: 30px;
+}
+label {
+  margin-right: 5px;
+  color: #eee;
+  padding: 0 10px;
+}
+select {
+  border: 0;
+}
 #chart svg {
-  height: 500px;
+  height: 600px;
   min-width: 200px;
   min-height: 100px;
+}
+#chart svg .nv-x .tick text {
+  padding-right: 10px;
+  -webkit-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+  text-anchor: end !important;
 }

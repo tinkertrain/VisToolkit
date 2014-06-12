@@ -32,7 +32,7 @@ gulp.task('css', function() {
 });
 
 gulp.task('browser-sync', function() {
-    browserSync.init(['css/*.css', 'scripts/*.js', 'index.html'], {
+    browserSync.init(['css/*.css', 'scripts/**/*.js', 'index.html'], {
         server: {
             baseDir: './'
         },
@@ -41,5 +41,5 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('default', ['css', 'browser-sync'], function () {
-    gulp.watch('less/main.less', ['css']);
+    gulp.watch('less/**/*.less', ['css']);
 });
